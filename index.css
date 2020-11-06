@@ -1,0 +1,8 @@
+.js-greetingForm,
+.js-greeting {
+  display: none;
+}
+
+.showing {
+  display: block;
+}
