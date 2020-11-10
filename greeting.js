@@ -1,5 +1,5 @@
-const form = document.querySelector(".js-greetingForm"),
-      input = form.querySelector("input")  // 폼 위치 
+const greetingForm = document.querySelector(".js-greetingForm"),
+      input = greetingForm.querySelector("input")  // 폼 위치 
 const greeting = document.querySelector(".js-greeting") // 이름 찍을 곳 
 
 const userName = "name"; // (2)에서 사용하려고 만듬
@@ -20,15 +20,15 @@ function submitHandler(event){
 
 //(4)이름을 출력해라 함수 
 function printName(text){
-    form.classList.remove(showingForm);//element.classList.remove("class명"); 클래스 삭제  
+    greetingForm.classList.remove(showingForm);//element.classList.remove("class명"); 클래스 삭제  
     greeting.classList.add(showingForm);
     greeting.innerText = `Hi ${text}`; //텍스트를 찍어라 
 }
 
 //(3)이름을 내놓아라 함수 
 function askName (){
-    form.classList.add(showingForm);// 폼을 그대로 보여줌 - 코드 입력 안함 
-    form.addEventListener("submit", submitHandler);//폼을 제출하는 이벤트 생성 
+    greetingForm.classList.add(showingForm);// 폼을 그대로 보여줌 - 코드 입력 안함 
+    greetingForm.addEventListener("submit", submitHandler);//폼을 제출하는 이벤트 생성 
 }
 
 
