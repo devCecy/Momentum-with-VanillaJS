@@ -11,7 +11,7 @@ function deleteToDo(event){
     const btn = event.target;
     const li = btn.parentNode;
     toDoList.removeChild(li);  // 여기까지 html에서 삭제 
-    const cleanToDos = toDos.filter(function(toDo){  //fillter는 araay의 모든 아이템을 통해 함수를 실행 시키고, true인 아이템만 가지고 새로운 array를 만든다. 
+    const cleanToDos = toDos.filter(function(toDo){  //filter는 araay의 모든 아이템을 통해 함수를 실행 시키고, true인 아이템만 가지고 새로운 array를 만든다. 
     return toDo.id !== parseInt(li.id);  // li의 id가 삭제되면 로컬에 저장된 id의 text도 지우고 싶어서 // li.id가 스트링이라 parseInt로 숫자로 변경 
     });
     toDos = cleanToDos;  // toDos is old , cleanTodos is new. 
